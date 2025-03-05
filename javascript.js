@@ -1,31 +1,25 @@
-function getComputerChoice () { 
-    if (Math.floor(Math.random() * 3) === 1) {
-        return "Rock";
-    } else if (Math.floor(Math.random() * 3) === 2) {
-        return "Paper";
-    } else {
-        return "Scissor";
-    }
-}
-console.log(getComputerChoice());
+// random choice from computer
+function getComputerChoice () {
+    let compChoice = Math.floor(Math.random() * 3 + 1);
 
-function getHumanChoice () {
-    let choice = prompt("Choose\n  Rock\n  Paper\n  Scissor");
+    if(compChoice == 1) {
+        console.log("Computer chose: Rock");
+        return compChoice;
+    } else if (compChoice == 2) {
+        console.log("Computer chose: Paper");
+        return compChoice;
+    } else {
+        console.log("Computer chose: Scissor");
+        return compChoice;
+    }
     
-    if (choice == "Rock") {
-        return "Rock";
-    } else if (choice == "Paper") {
-        return "Paper";
-    } else {
-        return "Scissor";
-    }
 }
 
-console.log(getHumanChoice());
 
-let humanScore = 0;
-let computerScore = 0;
-
-function playRound(humanChoice, computerChoice) {
-
+// get choice from player
+function getHumanChoice () {
+    let choice = prompt("Rock\nPaper\nScissor");
+    console.log("Player chose: " + choice);
+    return choice
 }
+
